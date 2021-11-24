@@ -1,10 +1,12 @@
 defmodule MeuModulo.Tabuada do
-    def calcula(multiplicador) do 
+    def calcula(multiplicador) do
         tabuada(multiplicador, 1)
     end
 
-    def tabuada(produto1, produto2) do 
-    [produto1 * produto2] ++ tabuada(produto1, produto2)
+    defp tabuada(_, 11), do: []
+
+    defp tabuada(produto1, produto2) do
+     [produto1 * produto2] ++ tabuada(produto1, produto2+1)
     end
 
 end

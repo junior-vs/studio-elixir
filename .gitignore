@@ -592,3 +592,4 @@ erl_crash.dump
 ### Elixir Patch ###
 
 # End of https://www.toptal.com/developers/gitignore/api/elixir
+cursos/lab1/.vscode/settings.json
