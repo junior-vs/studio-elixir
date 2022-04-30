@@ -1,6 +1,5 @@
-
 defmodule ExMon.Game do
- # alias ExMon.Player
+  # alias ExMon.Player
   use Agent
 
   def start(computer, player) do
@@ -12,5 +11,7 @@ defmodule ExMon.Game do
     Agent.get(__MODULE__, & &1)
   end
 
-
+  def player, do: Map.get(info(), :player)
+  def turn, do: Map.get(info(), :turn)
+  def fetch_player(player), do: Map.get(info(), player)
 end
