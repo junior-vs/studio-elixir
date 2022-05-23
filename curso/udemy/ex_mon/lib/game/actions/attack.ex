@@ -25,7 +25,14 @@ defmodule ExMon.Game.Actions.Attack do
     opponent
     |> Game.fetch_player()
     |> Map.put(:life, life)
+    |> update_game(opponent, damage)
+  end
 
-    #   |> update_game(opponent, damage)
+  defp update_game(player, opponent, damage) do
+    Game.info()
+    |> Map.put(opponent, player)
+    |> Game.update()
+
+    Status.print_move_message(opponent, :attack, damage)
   end
 end
