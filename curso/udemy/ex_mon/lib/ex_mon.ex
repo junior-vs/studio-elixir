@@ -8,7 +8,7 @@ defmodule ExMon do
   @computer_moves [:move_avg, :move_rnd, :move_heal]
 
   def create_player(name, move_avg, move_rnd, move_heal) do
-    Player.buid(name, move_avg, move_rnd, move_heal)
+    Player.build(name, move_avg, move_rnd, move_heal)
   end
 
   def start_game(player) do
